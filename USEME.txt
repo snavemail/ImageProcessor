@@ -1,0 +1,83 @@
+Running the GUI:
+-Launch by running the cs3500.imageprocessor.ImageProcessor class and interacting with GUI.
+Running the text-based processor:
+-Launch by running the cs3500.imageprocessor.ImageProcessor class and inputting commands into CLI.
+
+Commands:
+-New Project: Creates a new project with user-specified height and width.
+	Command: new-project [height] [width]
+-Load: Loads a previously created and saved project into the GUI.
+	Command: load [project path]
+-Save Image: Saves the currently loaded image as a PPM as user-specified name and path. 
+	Command: [image path] [image name]
+-Save Project: Saves currently loaded project as a project that can be reopened via the Load command. 
+	Command: [project path] [project name]
+-Add Image to Layer: Adds an image to the currently loaded layer.
+	Command: [image path] [x-coord] [y-coord]
+-Add Layer: Creates a new layer as user-specified name. Also adds a layer button to the left panel.
+	Command: add-layer [layer name]
+-Quit: quits the image processor
+	Command: quit
+
+Filters:
+-Blue Component: Applies filter that applies the blue pixel component.
+	Command: set-filter blue-component
+-Green Component: Applies filter that applies the green pixel component.
+	Command: set-filter green-component
+-Red Component: Applies filter that applies the red pixel component.
+	Command: set-filter red-component
+-Brighten Intensity: Applies filter that changes pixel value to according to intensity.
+	Command: set-filter brighten-intensity
+-Brighten Luma: Applies filter that changes pixel value to according to luma.
+	Command: set-filter brighten-luma
+-Brighten Value: Applies filter that changes pixel value to according to value.
+	Command: set-filter brighten-value
+-Brighten Blend: Applies filter brightens using the lightness values of the image below.
+	Command: set-filter brighten-blend
+-Darken Intensity: Applies filter that changes pixel value to according to intensity.
+	Command: set-filter darken-intensity
+-Darken Luma: Applies filter that changes pixel value to according to luma.
+	Command: set-filter darken-luma
+-Darken Value: Applies filter that changes pixel value to according to value.
+	Command: set-filter darken-value
+-Darken Blend: Applies filter darkens using the lightness values of the image below.
+	Command: set-filter darken-blend
+-Inversion: Applies filter that inverts colors based on RGB component values.
+	Command: set-filter inversion
+-Normal: No change is applied. 
+	Command: set-filter normal
+
+Layer Buttons:
+-Each layer button is added when a new layer is created. When pressed, the current layer becomes that layer.
+
+
+Image Processor Example:
+//Creates a new 500x500 project
+new-project 500 500
+
+//Creates a new layer called layer1
+add-layer layer1
+
+//Adds an image to layer1 at (50, 25)
+add-image-to-layer path/dog.ppm 50 25
+
+//Applies the green component filter to layer1
+set-filter green-component
+
+//Applies the brighten intensity filter to layer1
+set-filter brighten-intensity
+
+//Saves the image
+save-image path/dog.ppm dogimage
+
+//Saves the project
+save-project path/dog.ppm dogproject
+
+//Quits the image processor
+quit
+
+//Loads the dogproject project into the image processor
+load path/dog.ppm dogproject
+
+
+*Note - No updated functionality between A5-A7.

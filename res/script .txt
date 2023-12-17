@@ -1,0 +1,42 @@
+new-project 800 800
+add-layer layer1
+add-image-to-layer layer1 res/alpacaClipped.jpg 2 4
+set-filter red-component layer1
+set-filter brighten-value layer1
+add-layer layer2
+add-image-to-layer layer2 res/diagram.png 0 0
+set-filter blue-component layer2
+set-filter brighten-luma layer2
+add-layer layer3
+add-image-to-layer layer3 res/tako.ppm 20 40
+set-filter green-component layer3
+set-filter brighten-intensity layer3
+add-layer layer4
+add-image-to-layer layer4 res/cups.jpg 50 50
+set-filter darken-value layer4
+add-layer layer5
+add-image-to-layer layer5 res/cups.jpg 10 10
+set-filter darken-luma layer5
+add-layer layer6
+add-image-to-layer layer6 res/cups-red.jpg 5 5
+set-filter darken-intensity layer6
+add-layer layer7
+add-image-to-layer layer7 res/cups-red.jpg 20 40
+set-filter normal layer7
+add-layer layer8
+add-image-to-layer layer8 res/cups-red.ppm 40 40
+set-filter brighten-blend layer8
+add-layer layer9
+add-image-to-layer layer9 res/alpacaClipped.jpg 30 40
+set-filter darken-blend layer9
+add-layer layer10
+add-image-to-layer layer10 res/tako.ppm 15 20
+set-filter inversion layer10
+add-image-to-layer layer10 res/cups.jpg 20 20
+add-image-to-layer layer10 res/cups.png 30 20
+add-image-to-layer layer10 res/cups.ppm 40 20
+save-image res/script-output/ppm-image.ppm
+save-image res/script-output/jpg-image.jpg
+save-image res/script-output/png-image.png
+save-project res/script-output/collage-project.txt
+quit

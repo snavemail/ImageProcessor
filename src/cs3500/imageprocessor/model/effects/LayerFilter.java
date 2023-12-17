@@ -1,0 +1,1 @@
+package cs3500.imageprocessor.model.effects;/** * This interface represents a filter for a layer. Some filters are Blue, Green, Red components, and * some are blending filters such as Brighten Blend, Inversion, and Multiply. */public interface LayerFilter {  /**   * Returns the name of the filter.   *   * @return the name of the filter.   */  String getName();}
