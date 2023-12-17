@@ -26,7 +26,7 @@ All required features are available!
 * To run the processor, download the zip file from Handin and run the ImageProcessor class located in the src directory. This will launch the GUI, though you can type into the CLI if you prefer.
 
 
-##USEME LOCATION:
+## USEME LOCATION:
 The USEME file is a set of instructions on how to use our processor, with an example. The USEME file is located in the root submission folder. 
 
 
